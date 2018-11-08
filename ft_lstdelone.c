@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 14:41:41 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/07 14:10:49 by clfoltra         ###   ########.fr       */
+/*   Created: 2018/11/08 15:44:17 by clfoltra          #+#    #+#             */
+/*   Updated: 2018/11/08 16:20:19 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstdelone(t_list **node, void (*del)(void *, size_t))
 {
-	size_t len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	del(((*node)->content), (*node)->content_size);
+	free(*node);
+	*node = NULL;
 }
