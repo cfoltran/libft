@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:22:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/08 17:17:35 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/09 17:09:36 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <string.h>
 
 typedef struct		s_list
 {
@@ -70,11 +71,18 @@ char				*ft_strtrim(char const *s);
 char				*ft_strstr(const char *haystack, const char *needle);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char				*ft_strnstr(const char *haystack, const char *needle,
+					size_t len);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+char				*ft_strtrim(char const *s);
+void				*ft_memchr(const void *s, int c, size_t n);
+void				*ft_memmove(void *dst, const void *src, size_t len);
+char				*ft_strrchr(const char *s, int c);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t				ft_strlcat(char *dst, const char *src, size_t maxlen);
+size_t				ft_strnlen(const char *s, size_t maxlen);
 
 #endif

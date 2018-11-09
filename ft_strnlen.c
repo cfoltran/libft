@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 11:59:57 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 15:25:29 by clfoltra         ###   ########.fr       */
+/*   Created: 2018/11/09 17:09:04 by clfoltra          #+#    #+#             */
+/*   Updated: 2018/11/09 17:29:35 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+size_t	ft_strnlen(const char *s, size_t maxlen)
 {
-	const char	*sour;
-	size_t		i;
-	char		*dest;
-	char		*tmp;
+	size_t len;
 
-	sour = (const char*)src;
-	dest = (char*)dst;
-	i = 0;
-	if ((tmp = (char*)malloc(sizeof(char) * len)) == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		*(tmp + i) = *(sour + i);
-		i++;
-	}
-	i = 0;
-	while (i < len)
-	{
-		*(dest + i) = *(tmp + i);
-		i++;
-	}
-	free(tmp);
-	return (dst);
+	len = 0;
+	while (s[len] && len < maxlen)
+		len++;
+	return (len);
 }
-//

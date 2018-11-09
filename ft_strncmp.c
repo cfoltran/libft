@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 11:59:57 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 15:25:29 by clfoltra         ###   ########.fr       */
+/*   Created: 2018/11/09 15:39:27 by clfoltra          #+#    #+#             */
+/*   Updated: 2018/11/09 15:50:08 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	const char	*sour;
-	size_t		i;
-	char		*dest;
-	char		*tmp;
+	size_t i;
 
-	sour = (const char*)src;
-	dest = (char*)dst;
 	i = 0;
-	if ((tmp = (char*)malloc(sizeof(char) * len)) == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		*(tmp + i) = *(sour + i);
+	if (n > ft_strlen(s1))
+		return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)
 		i++;
-	}
-	i = 0;
-	while (i < len)
-	{
-		*(dest + i) = *(tmp + i);
-		i++;
-	}
-	free(tmp);
-	return (dst);
+	return (s1[i] - s2[i]);
 }
-//

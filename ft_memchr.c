@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 11:59:57 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 15:25:29 by clfoltra         ###   ########.fr       */
+/*   Created: 2018/11/09 11:00:07 by clfoltra          #+#    #+#             */
+/*   Updated: 2018/11/09 15:37:14 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*sour;
-	size_t		i;
-	char		*dest;
-	char		*tmp;
+	unsigned char	*str;
+	unsigned char	chr;
+	int				i;
 
-	sour = (const char*)src;
-	dest = (char*)dst;
+	str = (unsigned char*)s;
+	chr = (unsigned char)c;
 	i = 0;
-	if ((tmp = (char*)malloc(sizeof(char) * len)) == NULL)
-		return (NULL);
-	while (i < len)
+	while (n--)
 	{
-		*(tmp + i) = *(sour + i);
+		if (str[i] == chr)
+			return (str + i);
 		i++;
 	}
-	i = 0;
-	while (i < len)
-	{
-		*(dest + i) = *(tmp + i);
-		i++;
-	}
-	free(tmp);
-	return (dst);
+	return (NULL);
 }
-//

@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 09:52:33 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/08 11:30:38 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/09 15:24:44 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	j = 0;
 	if ((res = (char**)malloc(sizeof(*res) * count_words(s, c) + 1)) == NULL)
-		return(NULL);
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -75,26 +75,9 @@ char	**ft_strsplit(char const *s, char c)
 			k = 0;
 			while (s[i] && s[i] != c)
 				res[j][k++] = s[i++];
-			res[j][k] = '\0';
-			j++;
+			res[j++][k] = '\0';
 		}
 	}
 	res[j] = NULL;
 	return (res);
 }
-
-// int		main(int argc, char const *argv[])
-// {
-// 	(void) argc;
-// 	char **result;
-// 	int i;
-
-// 	i = 0;
-// 	result = ft_strsplit(argv[1], argv[2][0]);
-// 	while (result[i])
-// 	{
-// 		ft_putstr(result[i++]);
-// 		ft_putchar('\n');
-// 	}
-// 	return 0;
-// }
