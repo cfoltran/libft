@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:17:53 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/06 14:50:32 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/11 16:57:16 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	ft_putnbr_fd(int n, int fd)
 		n *= -1;
 	}
 	if (n >= 10)
-		ft_putnbr(n / 10);
+		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd((n % 10) + '0', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:51:05 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 11:17:00 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/11 16:52:57 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ char	*ft_strtrim(char const *s)
 		while (s[i] && !is_blank(s[i]))
 			res[j++] = s[i++];
 	}
-	res[j] = '\0';
+	res[j] = 0;
 	return (res);
 }

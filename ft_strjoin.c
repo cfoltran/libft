@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:14:35 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/07 17:48:37 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/11 16:12:24 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = ft_strlen(s1) + ft_strlen(s1);
 	if ((res = (char *)malloc(sizeof(res) * len + 1)) == NULL)
 		return (NULL);
-	return (ft_strcat((char *)s1, s2));
+	ft_strcpy(res, s1);
+	ft_strcat(res, s2);
+	return (res);
 }

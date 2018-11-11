@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 11:59:57 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 15:25:29 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/11 17:54:56 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	free(tmp);
 	return (dst);
 }
-//

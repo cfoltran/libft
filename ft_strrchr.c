@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 13:27:35 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 15:38:43 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/11 19:55:27 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = -1;
 	find = -1;
-	printf("%s", s);
+	if (s == NULL)
+		return (NULL);
 	while (s[++i])
-	{
-		printf("%d\n", i);
 		if (s[i] == c)
 			find = i;
-	}
-	if (find == -1)
-		return (NULL);
-	return ((char*)&s[find]);
+	if (find != -1)
+		return ((char*)&s[find]);
+	return (NULL);
 }
