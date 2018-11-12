@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:22:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/12 12:47:18 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/12 20:56:42 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
-char				*ft_strtrim(char const *s);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 char				*ft_strrchr(const char *s, int c);

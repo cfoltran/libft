@@ -6,7 +6,7 @@
 #    By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 13:28:57 by clfoltra          #+#    #+#              #
-#    Updated: 2018/11/11 17:55:25 by clfoltra         ###   ########.fr        #
+#    Updated: 2018/11/12 18:40:47 by clfoltra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRC = ft_putstr.c ft_putchar.c ft_putnbr.c ft_putendl.c ft_putchar_fd.c \
 
 
 OBJ = $(SRC:.c=.o)
+
+CFLAGS=-Wall -Wextra -Werror -O3
 
 all: $(NAME)
 $(NAME): $(OBJ)
