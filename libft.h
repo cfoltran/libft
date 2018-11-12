@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:22:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/11 17:58:15 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/12 12:47:18 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,7 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t maxlen);
 size_t				ft_strnlen(const char *s, size_t maxlen);
+void				ft_lstdel(t_list**alst, void (*del)(void*, size_t));
+char				*ft_itoa(int n);
 
 #endif

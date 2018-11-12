@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 12:30:56 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/09 15:37:55 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/12 13:00:50 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_len(int n)
 {
 	int len;
 
-	len = 0;
+	len = (n <= 0) ? 1 : 0;
 	while (n != 0)
 	{
 		n /= 10;
@@ -31,13 +31,13 @@ char	*ft_itoa(int n)
 	int		sign;
 	int		len;
 
-	res = NULL;
 	sign = (n < 0) ? -1 : 1;
 	len = ft_len(n);
 	if ((res = (char*)malloc(sizeof(char) * len + 1)) == NULL)
 		return (NULL);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	len--;
 	while (len >= 0)
 	{
 		res[len] = '0' + ABS(n % 10);
