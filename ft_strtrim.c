@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:51:05 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/12 22:30:47 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 19:00:16 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s)
 	int		len;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
 		len--;

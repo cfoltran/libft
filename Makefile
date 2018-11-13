@@ -6,11 +6,11 @@
 #    By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 13:28:57 by clfoltra          #+#    #+#              #
-#    Updated: 2018/11/12 18:40:47 by clfoltra         ###   ########.fr        #
+#    Updated: 2018/11/13 11:07:51 by clfoltra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
+NAME = libft.a
 
 SRC = ft_putstr.c ft_putchar.c ft_putnbr.c ft_putendl.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strlen.c ft_strdup.c \
@@ -23,19 +23,24 @@ SRC = ft_putstr.c ft_putchar.c ft_putnbr.c ft_putendl.c ft_putchar_fd.c \
 		ft_strjoin.c ft_strtrim.c ft_strstr.c ft_strstr.c ft_memcmp.c \
 		ft_strsplit.c ft_strnstr.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c \
 		ft_lstnew.c ft_strtrim.c ft_memchr.c ft_memmove.c ft_strrchr.c \
-		ft_strncmp.c ft_strlcat.c ft_strnlen.c ft_striteri.c \
+		ft_strncmp.c ft_strlcat.c ft_strnlen.c ft_striteri.c ft_itoa.c \
+		ft_lstdel.c ft_strncat.c ft_lstmap.c \
 
 
-OBJ = $(SRC:.c=.o)
+OBJ	= $(SRC:.c=.o)
 
-CFLAGS=-Wall -Wextra -Werror -O3
+CFLAGS	?=	-Wall -Wextra -Werror
+
+%.o: %.c
+	@$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+	@echo compiling $@
 
 all: $(NAME)
-$(NAME): $(OBJ)
-	ar rc $(NAME).a $(OBJ)
-	ranlib $(NAME).a
 
-fclean:
+$(NAME): $(OBJ)
+	ar rcs $@ $(OBJ)
+
+fclean: clean
 	rm -f $(NAME)
 
 clean:

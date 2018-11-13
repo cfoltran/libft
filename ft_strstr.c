@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_haystackstr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:12:56 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/12 19:49:32 by clfoltra         ###   ########.fr       */
+/*   Created: 2018/11/13 10:06:59 by clfoltra          #+#    #+#             */
+/*   Updated: 2018/11/13 11:42:10 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strstr(const char *haystack, const char *needle)
 			return ((char*)haystack + i);
 		i++;
 	}
-	return (0);
+	return ((haystack[0] == 0 && needle[0] == 0) ? (char*)haystack : 0);
 }

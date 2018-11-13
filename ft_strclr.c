@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:06:58 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/07 16:10:49 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:01:31 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_bzero(s, ft_strlen(s));
+	if (s)
+		ft_bzero(s, ft_strlen(s));
 }

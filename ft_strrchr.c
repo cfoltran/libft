@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 13:27:35 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/12 10:53:32 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:38:58 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 
-	i = ft_strlen(s) + 2;
+	i = ft_strlen(s) + 1;
 	if (s == NULL)
 		return (NULL);
 	while (--i >= 0 && s != NULL)

@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:50:25 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/07 16:09:52 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:00:15 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (*as != NULL)
+	if (as)
 	{
 		free(*as);
 		*as = NULL;

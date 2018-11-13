@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:22:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/12 20:56:42 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:06:53 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ size_t				ft_strlcat(char *dst, const char *src, size_t maxlen);
 size_t				ft_strnlen(const char *s, size_t maxlen);
 void				ft_lstdel(t_list**alst, void (*del)(void*, size_t));
 char				*ft_itoa(int n);
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

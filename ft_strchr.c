@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:44:08 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/12 10:55:05 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 16:02:49 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	int i;
 
 	i = -1;
-	if (s == NULL)
-		return (NULL);
 	while (s[++i])
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);

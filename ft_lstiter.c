@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:52:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/08 17:15:19 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/13 19:51:00 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (lst && f)
-	{
 		while (lst != NULL)
 		{
 			f(lst);
 			lst = lst->next;
 		}
-	}
 }
