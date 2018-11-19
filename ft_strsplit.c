@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 09:52:33 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/13 17:17:34 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/14 14:13:15 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (((res = (char**)malloc(sizeof(*res) * cw(s, c) + 1)) == NULL) || !s)
+	if (!s || ((res = (char**)malloc(sizeof(*res) * cw(s, c) + 1)) == NULL))
 		return (NULL);
 	while (s[i])
 	{

@@ -6,7 +6,7 @@
 #    By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 13:28:57 by clfoltra          #+#    #+#              #
-#    Updated: 2018/11/13 11:07:51 by clfoltra         ###   ########.fr        #
+#    Updated: 2018/11/14 12:44:43 by clfoltra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ SRC = ft_putstr.c ft_putchar.c ft_putnbr.c ft_putendl.c ft_putchar_fd.c \
 		ft_strsplit.c ft_strnstr.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c \
 		ft_lstnew.c ft_strtrim.c ft_memchr.c ft_memmove.c ft_strrchr.c \
 		ft_strncmp.c ft_strlcat.c ft_strnlen.c ft_striteri.c ft_itoa.c \
-		ft_lstdel.c ft_strncat.c ft_lstmap.c \
+		ft_lstdel.c ft_strncat.c ft_lstmap.c ft_isblank.c ft_islower.c \
+		ft_isupper.c ft_str_is_alpha.c ft_str_is_lowercase.c \
+		ft_str_is_uppercase.c \
 
 
 OBJ	= $(SRC:.c=.o)

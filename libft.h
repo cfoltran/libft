@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:22:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/13 11:06:53 by clfoltra         ###   ########.fr       */
+/*   Updated: 2018/11/14 12:41:50 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isalnum(int c);
+int					ft_isblank(int c);
+int					ft_islower(int c);
+int					ft_isupper(int c);
+int					ft_str_is_alpha(char *str);
+int					ft_str_is_lowercase(char *s);
+int					ft_str_is_uppercase(char *s);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
