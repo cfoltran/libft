@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:03:53 by clfoltra          #+#    #+#             */
-/*   Updated: 2019/01/28 11:26:01 by clfoltra         ###   ########.fr       */
+/*   Updated: 2019/01/28 12:14:07 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int		get_next_line(const int fd, char **line)
 	{
 		if ((pos = ft_strchr(buf, 10)))
 		{
-			*line = ft_strjoinfree(*line, buf, pos - buf + 1, 1);
+			*line = ft_strnjoinfree(*line, buf, pos - buf + 1, 1);
 			ft_strncpy(buf, &buf[pos - buf + 1], BUFF_SIZE - (pos - buf));
 			return (1);
 		}
-		*line = ft_strjoinfree(*line, buf, BUFF_SIZE, 1);
+		*line = ft_strnjoinfree(*line, buf, BUFF_SIZE, 1);
 		ret = read(fd, file[fd], BUFF_SIZE);
 		buf[ret] = '\0';
 		if (!ret)

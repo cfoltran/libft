@@ -6,13 +6,13 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 19:03:21 by clfoltra          #+#    #+#             */
-/*   Updated: 2018/11/26 10:38:46 by clfoltra         ###   ########.fr       */
+/*   Updated: 2019/01/28 12:07:44 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoinfree(char *s1, char *s2, size_t l, int opt)
+char	*ft_strnjoinfree(char *s1, char *s2, size_t l, int opt)
 {
 	char		*ptr;
 	size_t		len;

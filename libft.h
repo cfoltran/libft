@@ -6,7 +6,7 @@
 /*   By: clfoltra <clfoltra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:22:02 by clfoltra          #+#    #+#             */
-/*   Updated: 2019/01/28 11:27:13 by clfoltra         ###   ########.fr       */
+/*   Updated: 2019/01/28 12:15:28 by clfoltra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <string.h>
-# include <fcntl.h>
+# include <sys/types.h>
 # include <sys/types.h>
 # include <sys/stat.h>
-# define BUFF_SIZE 4096
-# define TRUE 1
-# define MAX_FD 4096
+
+# define BUFF_SIZE 	21
+# define MAX_FD 	4096
+# define TRUE		1
 
 typedef struct		s_list
 {
@@ -81,6 +81,7 @@ char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
+char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				**ft_strsplit(char const *s, char c);
@@ -98,7 +99,10 @@ size_t				ft_strlcat(char *dst, const char *src, size_t maxlen);
 size_t				ft_strnlen(const char *s, size_t maxlen);
 void				ft_lstdel(t_list**alst, void (*del)(void*, size_t));
 char				*ft_itoa(int n);
+char				*ft_strnjoinfree(char *s1, char *s2, size_t l, int opt);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int					get_next_line(const int fd, char **line);
+int					ft_strichr(const char *s, int c);
+void				ft_exit(char *msg, int val);
+int					ft_strccnt(char *s, char c);
 
 #endif
